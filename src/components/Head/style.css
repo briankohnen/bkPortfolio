@@ -1,0 +1,48 @@
+.headWrapper {
+    background: linear-gradient(45deg, #43cea2 10%, #18999d 90%);
+    height: 35vh;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.head {
+    max-width: 980px;
+    margin: 12vh auto;
+}
+.topHeader {
+    color: white;
+    text-shadow: -1px 2px #18999d;
+    font-size: 64px;
+}
+.botHeader {
+    margin-top: -2em;
+    color: white;
+    font-size: 28px;
+}
+.contactHeader {
+    color: white;
+    text-shadow: 2px 2px #18999d;
+    text-align: center;
+    font-size: 54px;
+}
+@media only screen and (max-width: 700px) {
+    .topHeader {
+        font-size: 36px;
+        text-align: center;
+    }
+    .botHeader {
+        font-size: 16px;
+        text-align: center;
+    }
+    .contactHeader {
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .headWrapper {
+        height: 20vh;
+    }
+    .head {
+        max-width: 980px;
+        margin: 7vh auto;
+    }
+}

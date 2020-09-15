@@ -1,0 +1,75 @@
+.contact {
+    margin: 0 auto;
+    max-width: 980px;
+    height: 57vh;
+}
+.contactButtons {
+    margin-top: 50px;
+    font-size: 42px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttonDesc {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.phNum {
+    color: teal;
+    text-decoration: none;
+}
+.fa {
+    opacity: 0;
+    transform: scale(0.1);
+    padding: 30px;
+    background: #18999d;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    transition: box-shadow ease-in 100ms, transform 500ms ease-in, opacity 500ms ease-in;
+}
+.iconVisible {
+    opacity: 1;
+    transform: scale(1);
+}
+.fa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.fa:visited {
+    text-decoration: none;
+}
+.resumeButton {
+    background: rgb(35,166,158);
+    color: white;
+    padding: 12px 8px;
+    width: 15vw;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+
+@media only screen and (max-width: 1000px) {
+    .fa {
+        opacity: 1;
+        transform: scale(0.75);
+    }
+}
+@media only screen and (max-width: 700px) {
+    .contact {
+        width: 90vw;
+        height: 65vh;
+        font-size: 14px;
+    }
+    .fa {
+        opacity: 1;
+        transform: scale(0.75);
+    }
+    .resumeButton {
+        width: 30vw;
+    }
+}
+@media only screen and (max-width: 650px) {
+
+}

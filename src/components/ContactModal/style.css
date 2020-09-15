@@ -1,0 +1,45 @@
+.modaly {
+    opacity: 0;
+    margin-top: 1vh;
+    background: rgb(156, 228, 208);
+    border: 1px solid #18999d;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    height: 2vh;
+    width: 7vw;
+    padding: 2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 1%;
+    border-radius:50%;
+    overflow: hidden;
+    animation: fade 1s forwards;
+}
+.words {
+    font-size: 1.05vw;
+    color: black;
+    /* animation: flip2 1.5s cubic-bezier(.56,.56,.56,.57) backwards; */
+}
+.slider {
+    animation: flip2 8s cubic-bezier(.56,.56,.56,.57) forwards;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+
+  @keyframes fade {
+    100% {
+        right: 20%;
+        border-radius: 2px;
+        opacity: 1;
+    }
+  }
+
+  @keyframes flip2 {
+    0% { margin-top: 0px; }
+    100% { margin-top: 900px; }
+}
+
+

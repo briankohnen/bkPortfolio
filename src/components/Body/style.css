@@ -1,0 +1,68 @@
+.appWrapper {
+    scroll-behavior: smooth;
+    filter: blur(0);
+    transition: all 200ms ease-in-out;
+}
+.blur {
+    filter: blur(3px);
+    pointer-events: none;
+}
+.about {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 61vh;
+}
+.linkers {
+    margin-top: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.aboutLinkToPortfolio {
+    padding: 10px;
+    border-radius: 1px;
+    border: 2px solid #18999d;
+    transition: box-shadow .3s;
+}
+.aboutLinkToPortfolio:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.contacto {
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+.un {
+    display: inline-block;
+    color: #176769;
+} 
+.un:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #18999d;
+    transition: 200ms;
+} 
+.un:hover:after {
+    width: 100%;
+}
+@media only screen and (max-width: 1000px) {
+    .about {
+        max-width: 90vw;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .about {
+        font-size: 14px
+    }
+}
+@media only screen and (max-width: 650px) {
+    .about {
+        height: 70vh;
+    }
+}
+@media only screen and (max-height: 450px) {
+    .aboutLinkToPortfolio {
+        display: none;
+    }
+}
