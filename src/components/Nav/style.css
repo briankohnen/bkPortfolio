@@ -10,6 +10,7 @@
 }
 .smNavLogo {
     transform: scale(0.5);
+    filter: invert(1);
     display: none;
     opacity: 0;
     position: fixed;
@@ -73,7 +74,7 @@ i.fa-times {
     border-radius: 50%;
     color: white;
     padding: 15px;
-    transform: scale(1);
+    font-size: 26px;
     text-decoration: none;
 }
 i.fa-bars:hover,

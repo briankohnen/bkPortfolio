@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Head from '../Head';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
+import TopButton from '../topButton';
 import './style.css';
 
 class Body extends Component {
@@ -14,6 +15,8 @@ class Body extends Component {
     }
     render() {
     return (
+        <>
+        <TopButton />
         <div className='appWrapper' id='about'>
         <Head topHeader={'Brian A. Kohnen'} botHeader={"Full Stack Web Developer based in Chicago, IL"} />
         <div className='about big3' data='About'>
@@ -38,6 +41,7 @@ class Body extends Component {
         <Portfolio />
         <Contact />
         </div>
+        </>
     );
     }
 

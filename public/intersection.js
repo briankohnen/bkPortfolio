@@ -5,10 +5,11 @@ const contactLinks = document.querySelectorAll('.faObs');
 const theBigThree = document.querySelectorAll('.big3');
 const navButtons = document.querySelectorAll('.navButton');
 const smNavLogo = document.querySelector('.smNavLogo');
+const topButton = document.querySelector('.topButton');
 
 const portfolioptions =  {
     root: null,
-    threshold: 0.6,
+    threshold: 0.7,
     rootMargin: '-400px 0px 0px 0px'
  };
 
@@ -71,6 +72,12 @@ const big3Observer = new IntersectionObserver(function(entries, big3Observer) {
                     button.classList.remove('active');
                 }
             });
+        }
+        if(entry.target.getAttribute('data') === 'About' ||
+           entry.target.getAttribute('data') === 'Portfolio' ) {
+            topButton.classList.remove('displayTopBtn');
+        } else {
+            topButton.classList.add('displayTopBtn');
         }
     });
 }, big3Options);
