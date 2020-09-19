@@ -39,7 +39,7 @@
 }
 @media only screen and (max-width: 650px) {
     .headWrapper {
-        height: 25vh;
+        height: 20vh;
     }
     .head {
         max-width: 980px;
