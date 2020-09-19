@@ -5,6 +5,11 @@ import './style.css';
 
 class Portfolio extends Component {
 
+    toggleImage = (event) => {
+        event.currentTarget.querySelector('.image').classList.toggle('showImg');
+    };
+
+
     render() {
     return (
     <div id='portfolio' className='portfolioWrapper big3' data='Portfolio'>
@@ -13,10 +18,8 @@ class Portfolio extends Component {
     <div className='portfolio'>
         
         <div className='centerContainer' id='centerContainer'>
-            <div className='projSpotlite p1' id='DreamLifer'>
-                {/* <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer'>
-                    <img className='image' src={DL} alt='Dream Lifer'></img>
-                </a> */}
+            <div className='projSpotlite p1' id='DreamLifer' onClick={this.toggleImage}>
+                    <img title='Dreamlifer' className='image' src='https://user-images.githubusercontent.com/45444261/69471574-5a3d1800-0d66-11ea-9a75-d906e85f1532.gif' alt='Dream Lifer'></img>
                 <div className='projDesc'>
                     <div className='projHeader'>
                         <p>DreamLifer</p>
@@ -33,10 +36,24 @@ class Portfolio extends Component {
                     </ul>
                 </div>
             </div>
-            <div className='projSpotlite p2' id='NewsScraper'>
-            {/* <a href='https://github.com/briankohnen/mongoNewsScrape' target='_blank' rel='noopener noreferrer'>
-                <img className='image' src={NS} alt='News Scraper'></img>
-            </a> */}
+            <div className='projSpotlite p2' id='RDG' onClick={this.toggleImage}>
+                <div className='projDesc'>
+                    <div className='projHeader'>
+                    <p>DemoGallery/Portfolio</p>
+                    </div>
+                    <p className='shortDesc'>A sleek photo gallery developed with React.js
+                    </p>
+                    <ul>
+                        <li>Uses flex-box to display images in orderly fashion</li>
+                        <li>I created my own 'lightbox' to focus an image</li>
+                        <li>Nice and simple animations between "galleries" of photo collections</li>
+                        <li><a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink'>Deployed link</a></li>
+                    </ul>
+                </div>
+                <img title='Demo Gallery'className='image' src='https://media.giphy.com/media/YvRF7iIrgnriDjColV/giphy.gif' alt='Memory Game'></img>
+            </div>
+            <div className='projSpotlite p3' id='NewsScraper' onClick={this.toggleImage}>
+                <img title='NewsScraper' className='image' src='https://media.giphy.com/media/BSQ3FgP67SqlUP5ZIg/giphy.gif' alt='News Scraper'></img>
                 <div className='projDesc'>
                     <div className='projHeader'>
                     <p>News Scraper</p>
@@ -51,10 +68,7 @@ class Portfolio extends Component {
                     </ul>
                 </div>
             </div>
-            <div className='projSpotlite p3' id='Bamazon'>
-            {/* <a href='https://github.com/briankohnen/bamazon' target='_blank' rel='noopener noreferrer'>
-                <img className='image' src='' alt='Bamazon'></img>
-            </a> */}
+            <div className='projSpotlite p4' id='Bamazon' onClick={this.toggleImage}>
                 <div className='projDesc'>
                     <div className='projHeader'>
                     <p>Bamazon</p>
@@ -68,48 +82,9 @@ class Portfolio extends Component {
                         <li><a href='https://github.com/briankohnen/bamazon' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
                     </ul>
                 </div>
-            </div>
-            <div className='projSpotlite p4' id='RMG'>
-                {/* <img className='image' src='' alt='Memory Game'></img> */}
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                    <p>React Memory Game</p>
-                    </div>
-                    <p className='shortDesc'>A CLI App used to read/update information in a hypothetical store's database.
-                    </p>
-                    <ul>
-                        <li>Three separate but interconnected functionalities</li>
-                        <li>Utilizes mySQL to store information</li>
-                        <li>Practice with using 'cli-table,' a powerful npm package for displaying tabular data in the command line</li>
-                        <li><a href='https://github.com/briankohnen/bamazon' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div className='projSpotlite p5' id='VGT'>
-                {/* <img className='image' src={NS} alt='Trivia Game'></img> */}
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                    <p>Video Game Trivia</p>
-                    </div>
-                    <p className='shortDesc'>A CLI App used to read/update information in a hypothetical store's database.
-                    </p>
-                    <ul>
-                        <li>Three separate but interconnected functionalities</li>
-                        <li>Utilizes mySQL to store information</li>
-                        <li>Practice with using 'cli-table,' a powerful npm package for displaying tabular data in the command line</li>
-                        <li><a href='https://github.com/briankohnen/bamazon' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                    </ul>
-                </div>
+                <img title='bamazon' className='image' src='https://media.giphy.com/media/JRcR2U6n25EtLsre3D/giphy.gif' alt='Bamazon'></img>
             </div>
         </div>
-
-        {/* {this.state.active ?
-        (
-        <> <ContactModal /> </>
-        ) : (
-        <> </>    
-        )
-        } */}
 
     </div>
     </div>

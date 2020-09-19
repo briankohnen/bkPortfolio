@@ -10,7 +10,7 @@ const topButton = document.querySelector('.topButton');
 const portfolioptions =  {
     root: null,
     threshold: 0.7,
-    rootMargin: '-400px 0px 0px 0px'
+    rootMargin: '0px 0px 0px 0px'
  };
 
 const portfolioObserver = new IntersectionObserver(function(entries, portfolioObserver) 
