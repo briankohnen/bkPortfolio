@@ -1,11 +1,16 @@
+.portfolioWrapper {
+    background: rgba(211, 211, 211, 0.377);
+    padding: 50px;
+
+}
 .portHeader {
     margin: 50px auto;
     max-width: 980px;
     font-size: 64px;
 }
-.spacer {
+/* .spacer {
     padding: 25px;
-}
+} */
 .portfolio {
     max-width: 980px;
     margin: 50px auto;

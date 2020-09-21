@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import importScript from '../../util/importScript';
-import Head from '../Head';
 import './style.css';
 
 class Portfolio extends Component {
@@ -12,9 +10,8 @@ class Portfolio extends Component {
 
     render() {
     return (
-    <div id='portfolio' className='portfolioWrapper big3' data='Portfolio'>
-    <div className='spacer'></div>
-    <p className='portHeader'>Projects</p>
+    <div id='portfolio' className='portfolioWrapper'>
+    <div className='big3' data='Portfolio'></div>
     <div className='portfolio'>
         
         <div className='centerContainer' id='centerContainer'>
@@ -39,7 +36,7 @@ class Portfolio extends Component {
             <div className='projSpotlite p2' id='RDG' onClick={this.toggleImage}>
                 <div className='projDesc'>
                     <div className='projHeader'>
-                    <p>DemoGallery/Portfolio</p>
+                    <p>Demo-Gallery</p>
                     </div>
                     <p className='shortDesc'>A sleek photo gallery developed with React.js
                     </p>
