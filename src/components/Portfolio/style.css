@@ -1,89 +1,78 @@
 .portfolioWrapper {
     background: rgba(211, 211, 211, 0.377);
-    padding: 50px;
-
+    grid-row: 2/3;
 }
-.portHeader {
-    margin: 50px auto;
-    max-width: 980px;
-    font-size: 64px;
+.galnav {
+    cursor: pointer;
+    transition: color 150ms;
 }
-/* .spacer {
-    padding: 25px;
-} */
-.portfolio {
-    max-width: 980px;
-    margin: 50px auto;
+.galnav:hover {
+    color:lightgreen;
 }
-.centerContainer {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    gap: 2.5%;
+.navLeft {
+    position: absolute;
+    margin: 45vh auto auto 5vw;
+}
+.navRight {
+    position: absolute;
+    margin: 45vh auto auto 90vw;
+}
+.portfolioViewer {
+    width: 65vw;
+    margin: 20vh auto;
+    opacity: 0;
+    transition: all 300ms ease-in;
 }
 .projSpotlite {
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transform: translateY(-15%);
-    transition: opacity 300ms ease-in, transform 250ms ease-out;
+    height: 60vh;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    opacity: 1;
+    transition: opacity 300ms ease-out, transform 400ms ease-out;
 }
-.projSpotlite.appear {
-    transform: translateY(0);
+.portfolioViewer.appear {
     opacity: 1;
 }
-.p1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-.p2 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-.p3 {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
-.p4 {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-}
 .image {
-    width: 400px;
-    height: 200px;
-    position: relative;
-    border-radius: 10px;
-}
-.projDesc {
-    width: 100%;
-    background: rgb(250, 250, 253);
-    border-radius: 10px;
-    border: 1px solid rgb(189, 189, 189);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    color: black;
+    max-width: 65vw;
+    grid-column: 1;
+    grid-row: 1/2;
 }
 .projHeader {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
+    grid-column: 6;
+    grid-row: 1/2;
+    margin-top: -3vh;
+    font-size: 96px;
+    font-weight: 200;
 }
-.shortDesc {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 15px;
-}
-ul {
+.projDesc {
+    grid-column: 1/6;
+    grid-row: 4;
     list-style-type: none;
-    font-size: 14px;
-    font-weight: 350;
-    padding: 5%;
+    font-size: 16px;
+    padding-left: 7.5px;
 }
+.projDesc>li {
+    margin-bottom: 16px;
+}
+.hoverlinks {
+    grid-column: 7;
+    grid-row: 4;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+} 
 .hoverLink {
     text-decoration: none;
-    color: #18999d;
-} 
+    font-size: 48px;
+    color: #2a7947;
+    transition: all 150ms;
+    margin-right: 5vw;
+}
 .hoverLink:hover {
-    text-decoration: underline;
+    color: #3ead67;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -97,39 +86,67 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 } 
-
-@media only screen and (max-width: 1000px) {
-    .portHeader {
-        max-width: 90vw;
-        font-size: 36px;
+/* .contentHolder {
+    opacity: 1;
+} */
+.slideRight {
+    animation: slideRight 600ms ease-in-out;
+}
+.slideLeft {
+    animation: slideLeft 600ms ease-in-out;
+}
+@keyframes slideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
     }
-    .portfolio {
-        max-width: 90vw;
+    25% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
-@media only screen and (max-width: 700px) {
-    .centerContainer {
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-        margin-bottom: 175px;
+@keyframes slideLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
     }
-    .shortDesc {
-        font-size: 14px;
-    }
-    ul {
-        font-size: 13px;
-    }
-    .image {
-        visibility: hidden;
+    25% {
         opacity: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: opacity 300ms ease;
+        transform: translateX(-100vw);
     }
-    .image.showImg {
-        visibility: visible;
-        opacity: 0.9;
+    50% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media only screen and (max-width: 1000px) {
+}
+@media only screen and (max-width: 768px) {
+    .galnav {
+        transform: scale(0.5);
+    }
+    .navLeft {
+        margin: 45vh auto auto 1vw;
+    }
+    .navRight {
+        margin: 45vh auto auto 85vw;
+    }
+    .projHeader {
+        font-size: 3rem;
+        grid-column: 1;
+        grid-row: 2;
     }
 }
 @media only screen and (max-width: 650px) {

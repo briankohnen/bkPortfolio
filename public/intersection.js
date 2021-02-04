@@ -1,15 +1,16 @@
-const portfolioItems = document.querySelectorAll('div.projSpotlite');
+const portfolioItems = document.querySelector('.portfolioViewer');
 const navi = document.querySelector('.navi');
-const topHeader = document.querySelector('.head');
-const contactLinks = document.querySelectorAll('.faObs');
+const topHeader = document.querySelector('.about');
 const theBigThree = document.querySelectorAll('.big3');
 const navButtons = document.querySelectorAll('.navButton');
 const smNavLogo = document.querySelector('.smNavLogo');
 const topButton = document.querySelector('.topButton');
+const contactSection = document.querySelector('#contact');
+const portfolioSection = document.querySelector('#portfolio');
 
 const portfolioptions =  {
     root: null,
-    threshold: 0.7,
+    threshold: 0.3,
     rootMargin: '0px 0px 0px 0px'
  };
 
@@ -25,73 +26,54 @@ const portfolioObserver = new IntersectionObserver(function(entries, portfolioOb
     });
 }, portfolioptions);
 
-const topHeadOptions = {
-    // rootMargin: '200px'
-};
+// const topHeadOptions = {
+// };
 
-const topHeadObserver = new IntersectionObserver(function(entries, topHeadObserver) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            navi.classList.add('nav-scrolled');
-            smNavLogo.classList.add('shoLogo');
-        } else {
-            navi.classList.remove('nav-scrolled');
-            smNavLogo.classList.remove('shoLogo');
-        }
-    }, topHeadOptions);
-});
+// const topHeadObserver = new IntersectionObserver(function(entries, topHeadObserver) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) {
+//             navi.classList.add('nav-scrolled');
+//         } else {
+//             navi.classList.remove('nav-scrolled');
+//         }
+//     }, topHeadOptions);
+// });
 
-const conOptions = {
-    rootMargin: '-125px'
-};
+const pFixOptions = {
+    rootMargin: '0px 0px -675px 0px'
+}
 
-const contactObserver = new IntersectionObserver(function(entries, contactObserver) {
+const portfolioFix = new IntersectionObserver((entries, portfolioFix) => {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
-            return;
+            navi.classList.remove('nav-scrolled');
         } else {
-            entry.target.classList.add('iconVisible');
-            contactObserver.unobserve(entry.target);
+            navi.classList.add('nav-scrolled');
         }
     });
-}, conOptions);
+}, pFixOptions);
 
-const big3Options = {
-    threshold: 0.6
+const contactOptions = {
+    threshold: 0.95
 };
 
-const big3Observer = new IntersectionObserver(function(entries, big3Observer) {
+const contactObserver = new IntersectionObserver((entries, contactObserver) => {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
-            return;
-        } else {
-            navButtons.forEach(button => {
-                if(button.innerHTML === entry.target.getAttribute('data')) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
-            });
-        }
-        if(entry.target.getAttribute('data') === 'About' ||
-           entry.target.getAttribute('data') === 'Portfolio' ) {
+            navi.classList.remove('hidenav');
             topButton.classList.remove('displayTopBtn');
         } else {
+            navi.classList.add('hidenav');
             topButton.classList.add('displayTopBtn');
         }
     });
-}, big3Options);
+}, contactOptions);
 
-portfolioItems.forEach(item => {
-    portfolioObserver.observe(item);
-});
 
-contactLinks.forEach(link => {
-    contactObserver.observe(link);
-});
+portfolioObserver.observe(portfolioItems);
 
-topHeadObserver.observe(topHeader);
+// topHeadObserver.observe(topHeader);
 
-theBigThree.forEach(link => {
-    big3Observer.observe(link)
-});
+contactObserver.observe(contactSection);
+
+portfolioFix.observe(portfolioSection);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Head from '../Head';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
 import TopButton from '../topButton';
@@ -12,35 +11,40 @@ class Body extends Component {
         script.async = true;
         script.src = './intersection.js';
         document.body.appendChild(script);
-    }
+    };
     render() {
     return (
         <>
         <TopButton />
-        <div className='appWrapper' id='about'>
-        <Head topHeader={'Brian A. Kohnen'} botHeader={"Full Stack Web Developer based in Chicago, IL"} />
-        <div className='about big3' data='About'>
-            <p>
-            Focused on creating feature rich and refined user-friendly web applications.
-            </p>
-            <p>
-            I have experience in coding responsive web applications from start-to-finish using MERN (MongoDB, Express, React, Node) stack JavaScript development.
-            </p>
-            <p>
-            I'm more skilled with back-end work, creating APIs and optimizing databases, but I love doing and learning every side of web developing.
-            </p>
-            <p>Get in touch with me <a href="#contact"><span className='contacto un'>here</span></a>.</p>
-            <div className='linkers'>
-                <a href='#portfolio'>
-                    <div className='aboutLinkToPortfolio'>
+        <main className='appWrapper' id='about'>
+        <section className='about big3' data='About'>
+            <article className='introduction'>
+                <h1>Brian Kohnen</h1>
+                <h3>a web developer based in Chicago, IL</h3>
+                <p>
+                I like building refined, user-friendly web applications and trying to create unique and interesting website designs.
+                </p>
+                <p>I'm usually working with these technologies:
+                    <ul>
+                        <li><code>JavaScript</code></li>
+                        <li><code>Express</code></li>
+                        <li><code>React</code></li>
+                        <li><code>Node.js</code></li>
+                    </ul>
+                </p>
+                {/* <p>Get in touch with me <a href="#contact"><span className='contacto un'>here</span></a>.</p> */}
+                {/* <div className='aboutLinkToPortfolio'>
+                    <a href='#portfolio'>
                         <span className='un'>Check out my work below</span>
-                    </div>
-                </a>
-            </div>
-        </div>
+                    </a>
+                </div> */}
+
+            </article>
+
+        </section>
         <Portfolio />
         <Contact />
-        </div>
+        </main>
         </>
     );
     }

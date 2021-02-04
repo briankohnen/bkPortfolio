@@ -1,5 +1,5 @@
 .headWrapper {
-    background: linear-gradient(45deg, #43cea2 10%, #18999d 90%);
+    background-image: url(https://thumbs.gfycat.com/AbleTastyCirriped-size_restricted.gif);
     height: 35vh;
     padding: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -10,8 +10,10 @@
 }
 .topHeader {
     color: white;
-    text-shadow: -1px 2px #18999d;
+    text-shadow: -1px 2px #000000;
     font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+    /* text-transform: uppercase; */
 }
 .botHeader {
     margin-top: -2em;
@@ -20,7 +22,7 @@
 }
 .contactHeader {
     color: white;
-    text-shadow: 2px 2px #18999d;
+    text-shadow: 2px 2px #000000;
     text-align: center;
     font-size: 54px;
 }

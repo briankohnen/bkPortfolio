@@ -6,7 +6,7 @@ import bkLogo from '../../images/bkLogo.png'
 class Nav extends Component {
 
     state = {
-        open: false
+        open: false,
     }
 
     handleMenuOpen = () => {
@@ -22,19 +22,16 @@ class Nav extends Component {
         return (
             <>
             <nav className='navi'>
-            <a href='#about'>
-                <img className='smNavLogo' src={bkLogo} alt='Brian Kohnen'></img>
-            </a>
                 <div className='buttonsWrapper'>
-                    <a href='#about'>
-                        <div className='navButton un'>About</div>
-                    </a>
-                    <a href='#portfolio'>
-                        <div className='navButton un'>Portfolio</div>
-                    </a>
-                    <a href='#contact'>
-                        <div className='navButton un'>Contact</div>
-                    </a>
+                    
+                        <div className='navButton un'><a href='#about'>About</a></div>
+
+                    
+                        <div className='navButton un'><a href='#portfolio'>Portfolio</a></div>
+
+                    
+                        <div className='navButton un'><a href='#contact'>Contact</a></div>
+
                     <a href='javascript:void(0);' className='hamburg' onClick={this.handleMenuOpen}>
                         <i className='fa fa-bars iconVisible'></i>
                     </a>

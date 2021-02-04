@@ -1,90 +1,139 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import './style.css';
 
 class Portfolio extends Component {
 
-    toggleImage = (event) => {
-        event.currentTarget.querySelector('.image').classList.toggle('showImg');
+    state = {
+        activeView: 0,
+        animate: 0
     };
 
+    projects = [
+        {
+            content: 
+            <div className={`projSpotlite`} id='bdn'>
+                <div className='projHeader'>
+                    <p>break<br></br>down.</p>
+                </div>
+
+                <ul className='projDesc'>
+                    <li>A quick breakdown your favorite musicians' top songs/genres</li>
+                    <li>Pulls data from Spotify and LastFM APIs</li>
+                    <li>Practice using Chart.js for a simple graph</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer' title='deployed link' className='hoverLink fa fa-link'></a>
+                    <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer' title='github link' className='hoverLink fa fa-github-alt'></a>
+                </div>
+
+                <img title='breakdown.' className='image' src='https://media1.giphy.com/media/RLG1P1nJGvSpK6MiWx/giphy.gif' alt='breakdown.'></img>
+            </div>
+        },
+        {
+            content:
+            <div className='projSpotlite' id='RDG'>
+                <div className='projHeader'>
+                    <p>Demo Gallery</p>
+                </div>
+
+                <ul className='projDesc'>
+                    <li>A sleek photo gallery developed with React</li>
+                    <li>Uses flex to display images in orderly and responsive layout</li>
+                    <li>Practice using Intersection Observer API for subtle visual flair</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
+                    <a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
+                </div>
+
+                <img title='Demo Gallery'className='image' src='https://media1.giphy.com/media/YvRF7iIrgnriDjColV/giphy.gif' alt='Demo Gallery'></img>
+            </div>
+        },
+        {
+            content:
+            <div className='projSpotlite' id='DreamLifer'>
+                <div className='projHeader'>
+                    <p>Dream<br></br>Lifer</p>
+                </div>
+
+                <ul className='projDesc'>
+                    <li>A personalized scheduling app to keep track of ones' goals</li>
+                    <li>Basic user authentication with cookies/express</li>
+                    <li>Developed with MongoDB, Express, React, and Node</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
+                    <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
+                </div>
+
+                <img title='Dreamlifer' className='image' src='' alt='DreamLifer'></img>
+            </div>
+        }
+    ];
+
+    handleAnimStart = (oper) => {
+        this.setState({animate: this.state.animate+=oper});
+
+        const timer = setTimeout(() => {
+            this.setState({activeView: this.state.activeView+=oper});
+        }, 350);
+        return () => clearTimeout(timer);
+
+    };
+
+    handleAnimEnd = () => {
+        this.setState({animate: 0});
+    };
 
     render() {
     return (
-    <div id='portfolio' className='portfolioWrapper'>
-    <div className='big3' data='Portfolio'></div>
-    <div className='portfolio'>
-        
-        <div className='centerContainer' id='centerContainer'>
-            <div className='projSpotlite p1' id='DreamLifer' onClick={this.toggleImage}>
-                    <img title='Dreamlifer' className='image' src='https://user-images.githubusercontent.com/45444261/69471574-5a3d1800-0d66-11ea-9a75-d906e85f1532.gif' alt='Dream Lifer'></img>
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                        <p>DreamLifer</p>
-                    </div>
-                        <p className='shortDesc'>A personalized scheduling app to keep track of goals towards ones' dream life.
+
+    <section id='portfolio' className='big3 portfolioWrapper' data='Portfolio'>
+
+        {this.state.activeView > 0 ?
+        <nav className='galnav navLeft fa fa-chevron-circle-left fa-4x' onClick={()=>this.handleAnimStart(-1)}></nav>
+        :
+        <></>
+        }
+        {this.state.activeView < 2 ?
+        <nav className='galnav navRight fa fa-chevron-circle-right fa-4x' onClick={()=>this.handleAnimStart(1)}></nav>
+        :
+        <></>
+        }
+
+        <div className={`portfolioViewer`}>
+
+            <div className={`contentHolder ${this.state.animate === 1 ? 'slideRight' : this.state.animate === -1 ? 'slideLeft' : ''}`} onAnimationEnd={this.handleAnimEnd}>
+
+                {this.projects[this.state.activeView].content}
+
+            </div>
+
+                {/* <div className='projSpotlite' id='NewsScraper' onClick={this.toggleImage}>
+                    <img title='NewsScraper' className='image' src='https://media.giphy.com/media/BSQ3FgP67SqlUP5ZIg/giphy.gif' alt='News Scraper'></img>
+                    <div className='projDesc'>
+                        <div className='projHeader'>
+                        <p>News Scraper</p>
+                        </div>
+                        <p className='shortDesc'>A simple app that uses a web scraping tool to get information from the Chicago Sun Times and allows users to read/save/comment on them.
                         </p>
-                    <ul>
-                        <li>Created API for database communication</li>
-                        <li>Basic user authentication with cookies/express</li>
-                        <li>Password encryption</li>
-                        <li>Google Firebase to store users' profile images</li>
-                        <li>Start-to-finish developed through use of MERN <br></br> techologies with two other colleagues</li>
-                        <li><a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div className='projSpotlite p2' id='RDG' onClick={this.toggleImage}>
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                    <p>Demo-Gallery</p>
+                        <ul>
+                            <li>Basic website scraping with 'cheerio' npm package</li>
+                            <li>Use of 'Handlebars' for front-end templating</li>
+                            <li>Information stored with MongoDB</li>
+                            <li><a href='https://github.com/briankohnen/mongoNewsScrape' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
+                        </ul>
                     </div>
-                    <p className='shortDesc'>A sleek photo gallery developed with React.js
-                    </p>
-                    <ul>
-                        <li>Uses flex-box to display images in orderly fashion</li>
-                        <li>I created my own 'lightbox' to focus an image</li>
-                        <li>Nice and simple animations between "galleries" of photo collections</li>
-                        <li><a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink'>Deployed link</a></li>
-                    </ul>
                 </div>
-                <img title='Demo Gallery'className='image' src='https://media.giphy.com/media/YvRF7iIrgnriDjColV/giphy.gif' alt='Memory Game'></img>
-            </div>
-            <div className='projSpotlite p3' id='NewsScraper' onClick={this.toggleImage}>
-                <img title='NewsScraper' className='image' src='https://media.giphy.com/media/BSQ3FgP67SqlUP5ZIg/giphy.gif' alt='News Scraper'></img>
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                    <p>News Scraper</p>
-                    </div>
-                    <p className='shortDesc'>A simple app that uses a web scraping tool to get information from the Chicago Sun Times and allows users to read/save/comment on them.
-                    </p>
-                    <ul>
-                        <li>Basic website scraping with 'cheerio' npm package</li>
-                        <li>Use of 'Handlebars' for front-end templating</li>
-                        <li>Information stored with MongoDB</li>
-                        <li><a href='https://github.com/briankohnen/mongoNewsScrape' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div className='projSpotlite p4' id='Bamazon' onClick={this.toggleImage}>
-                <div className='projDesc'>
-                    <div className='projHeader'>
-                    <p>Bamazon</p>
-                    </div>
-                    <p className='shortDesc'>A CLI App used to read/update information in a hypothetical store's database.
-                    </p>
-                    <ul>
-                        <li>Three separate but interconnected functionalities</li>
-                        <li>Utilizes mySQL to store information</li>
-                        <li>Practice with using 'cli-table,' a powerful npm package for displaying tabular data in the command line</li>
-                        <li><a href='https://github.com/briankohnen/bamazon' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                    </ul>
-                </div>
-                <img title='bamazon' className='image' src='https://media.giphy.com/media/JRcR2U6n25EtLsre3D/giphy.gif' alt='Bamazon'></img>
-            </div>
+                */}
+
         </div>
 
-    </div>
-    </div>
+    </section>
+
     );
     }
 
