@@ -13,8 +13,11 @@ class Portfolio extends Component {
             content: 
             <div className={`projSpotlite`} id='bdn'>
                 <div className='projHeader'>
+                <img title='breakdown.' className='image' src='https://media1.giphy.com/media/RLG1P1nJGvSpK6MiWx/giphy.gif' alt='breakdown.'></img>
                     <p>break<br></br>down.</p>
                 </div>
+
+                <div className='projLower'>
 
                 <ul className='projDesc'>
                     <li>A quick breakdown your favorite musicians' top songs/genres</li>
@@ -27,15 +30,19 @@ class Portfolio extends Component {
                     <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer' title='github link' className='hoverLink fa fa-github-alt'></a>
                 </div>
 
-                <img title='breakdown.' className='image' src='https://media1.giphy.com/media/RLG1P1nJGvSpK6MiWx/giphy.gif' alt='breakdown.'></img>
+                </div>
+
             </div>
         },
         {
             content:
             <div className='projSpotlite' id='RDG'>
                 <div className='projHeader'>
-                    <p>Demo Gallery</p>
+                <img title='Demo Gallery'className='image' src='https://media1.giphy.com/media/YvRF7iIrgnriDjColV/giphy.gif' alt='Demo Gallery'></img>
+                    <p>Demo<br></br> Gallery</p>
                 </div>
+
+                <div className='projLower'>
 
                 <ul className='projDesc'>
                     <li>A sleek photo gallery developed with React</li>
@@ -48,15 +55,19 @@ class Portfolio extends Component {
                     <a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
                 </div>
 
-                <img title='Demo Gallery'className='image' src='https://media1.giphy.com/media/YvRF7iIrgnriDjColV/giphy.gif' alt='Demo Gallery'></img>
+                </div>
+
             </div>
         },
         {
             content:
             <div className='projSpotlite' id='DreamLifer'>
                 <div className='projHeader'>
+                <img title='Dreamlifer' className='image' src='' alt='DreamLifer'></img>
                     <p>Dream<br></br>Lifer</p>
                 </div>
+
+                <div className='projLower'>
 
                 <ul className='projDesc'>
                     <li>A personalized scheduling app to keep track of ones' goals</li>
@@ -69,7 +80,8 @@ class Portfolio extends Component {
                     <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
                 </div>
 
-                <img title='Dreamlifer' className='image' src='' alt='DreamLifer'></img>
+                </div>
+
             </div>
         }
     ];

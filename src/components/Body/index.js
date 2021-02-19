@@ -33,11 +33,11 @@ class Body extends Component {
                     </ul>
                 </p>
                 {/* <p>Get in touch with me <a href="#contact"><span className='contacto un'>here</span></a>.</p> */}
-                {/* <div className='aboutLinkToPortfolio'>
+                <div className='aboutLinkToPortfolio'>
                     <a href='#portfolio'>
                         <span className='un'>Check out my work below</span>
                     </a>
-                </div> */}
+                </div>
 
             </article>
 

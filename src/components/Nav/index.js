@@ -23,18 +23,18 @@ class Nav extends Component {
             <>
             <nav className='navi'>
                 <div className='buttonsWrapper'>
-                    
+
+                    {this.props.width < 1000 ?
+                        <a href='javascript:void(0);' className='hamburg' onClick={this.handleMenuOpen}>
+                            <i className='fa fa-bars iconVisible'></i>
+                        </a>
+                    :
+                    <>
                         <div className='navButton un'><a href='#about'>About</a></div>
-
-                    
                         <div className='navButton un'><a href='#portfolio'>Portfolio</a></div>
-
-                    
                         <div className='navButton un'><a href='#contact'>Contact</a></div>
-
-                    <a href='javascript:void(0);' className='hamburg' onClick={this.handleMenuOpen}>
-                        <i className='fa fa-bars iconVisible'></i>
-                    </a>
+                    </>
+                    }
                 </div>
             </nav>
             

@@ -7,7 +7,6 @@
     grid-template-columns: auto;
 }
 .blur {
-    filter: blur(2px);
     pointer-events: none;
 }
 .about {
@@ -15,10 +14,11 @@
     background:rgb(13,13,36);
     background-attachment: fixed;
     color: white;
+    position: relative;
 }
 .introduction {
     max-width: 65vw;
-    margin: 25vh auto;
+    margin: 20vh auto;
     perspective: 200px;
     transition: all 200ms ease;
 }
@@ -26,16 +26,19 @@
     position: relative;
     font-size: 6rem;
     z-index: 10;
+    animation: fadein 500ms;
 }
 .introduction>h3 {
     font-size: 36px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
     z-index: 10;
+    animation: fadein 900ms;
 }
 .introduction>p {
     line-height: 30px;
     font-size: 1rem;
+    animation: fadein 1300ms;
 }
 .introduction>p:last-of-type {
     margin-top: 5vh;
@@ -70,6 +73,7 @@ code {
     width: 15vw;
     border-radius: 5px;
     position: relative;
+    animation: sidein 2000ms;
 }
 .aboutLinkToPortfolio>a{
     display: block;
@@ -90,8 +94,46 @@ code {
     letter-spacing: 1px;
     color: lightgreen;
 }
-
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(-5vh);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes sidein {
+    0% {
+        opacity: 0;
+        transform: translateX(-25vw)
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-15vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @media only screen and (max-width: 1000px) {
+    .introduction>h1 {
+        font-size: 3.5rem;
+    }
+    .introduction>h3 {
+        font-size: 2rem;
+    }
+    .introduction>p {
+        line-height: 24px;
+    }
+    .introduction>p>ul>li {
+        font-size: 1.5rem;
+    }
+    .aboutLinkToPortfolio {
+        width: 25vw;
+    }
 }
 @media only screen and (max-width: 768px) {
     .about {
@@ -112,13 +154,27 @@ code {
         font-size: 1rem;
     }
     .aboutLinkToPortfolio {
-        margin: 12.5vh auto 0 auto;
+        margin: 15vh auto 0 auto;
         width: 60vw;
+        font-size: .85rem;
     }
 }
-@media only screen and (max-width: 650px) {
-    .about {
+@media only screen and (max-width: 765px) {
+    .aboutLinkToPortfolio {
+        display: none;
     }
 }
-@media only screen and (max-height: 450px) {
+@media only screen and (min-device-width: 375px) and (max-device-height: 813px) and (orientation: landscape) {
+    .aboutLinkToPortfolio {
+        display: none;
+    }
+    .introduction>h1 {
+        font-size: 10vmin;
+    }
+    .introduction>h3 {
+        font-size: 6vmin;
+    }
+    .introduction>p {
+        font-size: 3.5vmin;
+    }
 }

@@ -18,6 +18,9 @@ class NavBurger extends Component {
                     <a href='#contact'>
                         <div className='burgerButton' onClick={this.props.handleMenuOpen}>Contact</div>
                     </a>
+
+                    <a href='https://drive.google.com/file/d/11sO7DVSUt2nm8myQ7cz1llRYJ6wc1yOM/view?usp=sharing' target="_blank" rel='noopener noreferrer' alt='resume'><div className='rBurg'>View my resume</div></a>
+
                 </div>
         );
     }

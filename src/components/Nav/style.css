@@ -6,13 +6,14 @@
     display: flex;
     justify-content: flex-end;
     padding: 25px;
-    transition: all 200ms ease-in-out;
+    transition: color 200ms ease-in-out;
 }
 .nav-scrolled>div>.navButton>a {
     color: black;
 }
 .hidenav {
-    display: none;
+    pointer-events: none;
+    opacity: 0;
 }
 .verticalOpen {
     transform: translateY(-100%);
@@ -26,6 +27,7 @@
 .navButton {
     font-size: 16px;
     margin-right: 3vw;
+    animation: sideinav 2000ms;
 }
 .navButton.un {
     display: inline-block;
@@ -51,12 +53,14 @@
 }
 i.fa-bars,
 i.fa-times {
-    display: none;
+    position: absolute;
+    right: 2vw;
+    display: block;
     background: transparent;
     border-radius: 50%;
     color: white;
     padding: 15px;
-    font-size: 4rem;
+    font-size: 10vmin;
     text-decoration: none;
 }
 i.fa-times {
@@ -71,7 +75,20 @@ i.fa-bars:visited,
 i.fa-times:visited {
     text-decoration: none;
 }
-
+@keyframes sideinav {
+    0% {
+        opacity: 0;
+        transform: translateX(25vw)
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(15vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @media only screen and (max-width: 768px) {
     .navi {
         padding: 5px;
@@ -82,6 +99,11 @@ i.fa-times:visited {
     i.fa-bars,
     i.fa-times {
         display: block;
+        color: white;
+        z-index: 20000;
+    }
+    .nav-scrolled>div>a>.fa-bars {
+        color: darkgreen;
     }
     .smNavLogo {
         transform: scale(0.3);

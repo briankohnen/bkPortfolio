@@ -25,9 +25,18 @@
     font-size: 36px;
 }
 a {
+    margin-top: 33%;
     text-decoration: none;
 }
 .verticalMenuOpen {
     opacity: 1;
     transform: translateX(0);
+}
+.rBurg {
+    background: rgb(21, 24, 34);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5vmin;
+    font-size: 5vmin;
 }
