@@ -26,19 +26,19 @@
     position: relative;
     font-size: 6rem;
     z-index: 10;
-    animation: fadein 500ms;
+    animation: fadedown 600ms;
 }
 .introduction>h3 {
     font-size: 36px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
     z-index: 10;
-    animation: fadein 900ms;
+    animation: fadedown 600ms;
 }
 .introduction>p {
     line-height: 30px;
-    font-size: 1rem;
-    animation: fadein 1300ms;
+    font-size: 2.5vmin;
+    animation: fadeup 900ms;
 }
 .introduction>p:last-of-type {
     margin-top: 5vh;
@@ -94,10 +94,20 @@ code {
     letter-spacing: 1px;
     color: lightgreen;
 }
-@keyframes fadein {
+@keyframes fadedown {
     0% {
         opacity: 0;
         transform: translateY(-5vh);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        transform: translateY(5vh);
     } 
     100% {
         opacity: 1;
@@ -149,6 +159,7 @@ code {
     }
     .introduction>p {
         line-height: 22px;
+        font-size: 4vmin;
     }
     .introduction>p>ul>li {
         font-size: 1rem;

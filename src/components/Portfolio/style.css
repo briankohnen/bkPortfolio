@@ -52,7 +52,7 @@
 .projDesc {
     margin-top: 3vh;
     list-style-type: none;
-    font-size: 16px;
+    font-size: 2.5vmin;
     padding-left: 7.5px;
 }
 .projDesc>li {
@@ -156,6 +156,9 @@
     .projHeader {
         font-size: 4rem;
     }
+    .projDesc {
+        font-size: 4vmin;
+    }
 }
 /* @media only screen and (min-device-width: 375px) and (max-device-width: 782px) and (orientation: landscape) {
     .portfolioViewer {
@@ -186,6 +189,9 @@
     }
     .projDesc {
         font-size: 4vmin;
+    }
+    .hoverlinks {
+        margin-top: -5vh;
     }
     .hoverLink {
         font-size: 12vmin;

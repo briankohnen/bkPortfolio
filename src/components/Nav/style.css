@@ -25,7 +25,7 @@
     color: white;
 }
 .navButton {
-    font-size: 16px;
+    font-size: 2vmin;
     margin-right: 3vw;
     animation: sideinav 2000ms;
 }
@@ -33,20 +33,6 @@
     display: inline-block;
     color: white;
 } 
-.navButton.un:after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: rgb(116, 255, 218);
-    transition: 200ms;
-} 
-.navButton.un:hover:after {
-    width: 100%;
-}
-.navButton.un.active:hover:after {
-    width: 0;
-}
 .hamburg {
     display: initial;
     z-index: 1000;

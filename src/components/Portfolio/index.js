@@ -20,7 +20,7 @@ class Portfolio extends Component {
                 <div className='projLower'>
 
                 <ul className='projDesc'>
-                    <li>A quick breakdown your favorite musicians' top songs/genres</li>
+                    <li>A quick breakdown of your favorite musicians' top songs/genres</li>
                     <li>Pulls data from Spotify and LastFM APIs</li>
                     <li>Practice using Chart.js for a simple graph</li>
                 </ul>
@@ -28,6 +28,30 @@ class Portfolio extends Component {
                 <div className='hoverlinks'>
                     <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer' title='deployed link' className='hoverLink fa fa-link'></a>
                     <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer' title='github link' className='hoverLink fa fa-github-alt'></a>
+                </div>
+
+                </div>
+
+            </div>
+        },
+        {
+            content:
+            <div className='projSpotlite' id='PortfolioG'>
+                <div className='projHeader'>
+                <img title='Dreamlifer' className='image' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='DreamLifer'></img>
+                    <p>Portfolio<br></br>Template</p>
+                </div>
+
+                <div className='projLower'>
+
+                <ul className='projDesc'>
+                    <li>A template for a photo/writing portfolio</li>
+                    <li>Practice with creative layouts and react-transition-groups</li>
+                    <li>Emphasized responsive design</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
                 </div>
 
                 </div>
@@ -63,7 +87,7 @@ class Portfolio extends Component {
             content:
             <div className='projSpotlite' id='DreamLifer'>
                 <div className='projHeader'>
-                <img title='Dreamlifer' className='image' src='' alt='DreamLifer'></img>
+                <img title='Dreamlifer' className='image' src='https://media2.giphy.com/media/IlgHjVWxQMtdU53Veu/giphy.gif' alt='DreamLifer'></img>
                     <p>Dream<br></br>Lifer</p>
                 </div>
 
@@ -105,12 +129,13 @@ class Portfolio extends Component {
 
     <section id='portfolio' className='big3 portfolioWrapper' data='Portfolio'>
 
+
         {this.state.activeView > 0 ?
         <nav className='galnav navLeft fa fa-chevron-circle-left fa-4x' onClick={()=>this.handleAnimStart(-1)}></nav>
         :
         <></>
         }
-        {this.state.activeView < 2 ?
+        {this.state.activeView < 3 ?
         <nav className='galnav navRight fa fa-chevron-circle-right fa-4x' onClick={()=>this.handleAnimStart(1)}></nav>
         :
         <></>
@@ -118,29 +143,11 @@ class Portfolio extends Component {
 
         <div className={`portfolioViewer`}>
 
-            <div className={`contentHolder ${this.state.animate === 1 ? 'slideRight' : this.state.animate === -1 ? 'slideLeft' : ''}`} onAnimationEnd={this.handleAnimEnd}>
+            <div className={`contentHolder ${this.state.animate === 1 ? 'slideLeft' : this.state.animate === -1 ? 'slideRight' : ''}`} onAnimationEnd={this.handleAnimEnd}>
 
                 {this.projects[this.state.activeView].content}
 
             </div>
-
-                {/* <div className='projSpotlite' id='NewsScraper' onClick={this.toggleImage}>
-                    <img title='NewsScraper' className='image' src='https://media.giphy.com/media/BSQ3FgP67SqlUP5ZIg/giphy.gif' alt='News Scraper'></img>
-                    <div className='projDesc'>
-                        <div className='projHeader'>
-                        <p>News Scraper</p>
-                        </div>
-                        <p className='shortDesc'>A simple app that uses a web scraping tool to get information from the Chicago Sun Times and allows users to read/save/comment on them.
-                        </p>
-                        <ul>
-                            <li>Basic website scraping with 'cheerio' npm package</li>
-                            <li>Use of 'Handlebars' for front-end templating</li>
-                            <li>Information stored with MongoDB</li>
-                            <li><a href='https://github.com/briankohnen/mongoNewsScrape' target='_blank' rel='noopener noreferrer' className='hoverLink'>Github link</a></li>
-                        </ul>
-                    </div>
-                </div>
-                */}
 
         </div>
 
