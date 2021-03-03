@@ -38,7 +38,7 @@ class Portfolio extends Component {
             content:
             <div className='projSpotlite' id='PortfolioG'>
                 <div className='projHeader'>
-                <img title='Dreamlifer' className='image' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='DreamLifer'></img>
+                <img title='Template' className='image' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
                     <p>Portfolio<br></br>Template</p>
                 </div>
 
@@ -111,13 +111,18 @@ class Portfolio extends Component {
     ];
 
     handleAnimStart = (oper) => {
-        this.setState({animate: this.state.animate+=oper});
+            this.setState({animate: this.state.animate+=oper});
 
-        const timer = setTimeout(() => {
-            this.setState({activeView: this.state.activeView+=oper});
-        }, 350);
-        return () => clearTimeout(timer);
-
+            const timer = setTimeout(() => {
+                if (this.state.activeView <= 0 && oper === -1) {
+                    this.setState({activeView: 3});
+                } else if (this.state.activeView >= 3 && oper === 1) {
+                    this.setState({activeView: 0});
+                } else {
+                    this.setState({activeView: this.state.activeView+=oper});
+                }
+            }, 350);
+            return () => clearTimeout(timer);
     };
 
     handleAnimEnd = () => {
@@ -129,23 +134,16 @@ class Portfolio extends Component {
 
     <section id='portfolio' className='big3 portfolioWrapper' data='Portfolio'>
 
-
-        {this.state.activeView > 0 ?
         <nav className='galnav navLeft fa fa-chevron-circle-left fa-4x' onClick={()=>this.handleAnimStart(-1)}></nav>
-        :
-        <></>
-        }
-        {this.state.activeView < 3 ?
         <nav className='galnav navRight fa fa-chevron-circle-right fa-4x' onClick={()=>this.handleAnimStart(1)}></nav>
-        :
-        <></>
-        }
 
         <div className={`portfolioViewer`}>
 
             <div className={`contentHolder ${this.state.animate === 1 ? 'slideLeft' : this.state.animate === -1 ? 'slideRight' : ''}`} onAnimationEnd={this.handleAnimEnd}>
 
-                {this.projects[this.state.activeView].content}
+                {
+                this.projects[this.state.activeView].content
+                }
 
             </div>
 
