@@ -2,7 +2,6 @@
     margin: 0 auto;
     max-width: 90vw;
     grid-row: 3/4;
-    position: relative;
 }
 .topSec {
     display: flex;
@@ -420,6 +419,9 @@ input {
     }
 }
 @media all and (device-width: 768px) {
+    .contact {
+        position: relative;
+    }
     .contactButtons {
         position: relative;
         left: 0;
@@ -431,6 +433,9 @@ input {
     }
 }
 @media all and (device-width: 1024px) {
+    .contact {
+        position: relative;
+    }
     .contactButtons {
         position: relative;
         left: 0;
