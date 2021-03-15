@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import './style.css';
 
 class Portfolio extends Component {
@@ -100,7 +100,7 @@ class Portfolio extends Component {
                 </ul>
 
                 <div className='hoverlinks'>
-                    <a href='https://react-demo-gallery.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
+                    <a href='https://dreamlifer.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
                     <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
                 </div>
 

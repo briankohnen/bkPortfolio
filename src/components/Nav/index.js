@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
 import NavBurger from '../NavBurger';
-import bkLogo from '../../images/bkLogo.png'
 
 class Nav extends Component {
 

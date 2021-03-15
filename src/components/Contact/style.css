@@ -96,8 +96,8 @@ form>textarea {
 .resumeButton {
     position: absolute;
     font-size: 3vmin;
-    bottom: 4vh;
-    left: 45vw;
+    bottom: 5vh;
+    left: 40vw;
     background: rgb(13, 13, 36);
     color: white;
     padding: 2vmin;
@@ -251,19 +251,19 @@ input {
     transform: translateZ(100px);
 }
 .animC:nth-child(2) {
-    transform:translateZ(-100px) rotateX(-180deg);
+    transform:translateZ(-100px) rotateX(-179.9deg);
 }
 .animC:nth-child(3) {
-    transform: translateY(-100px) rotateX(-90deg);
+    transform: translateY(-100px) rotateX(-89.9deg);
 }
 .animC:nth-child(4) {
-    transform: translateY(100px) rotateX(90deg);
+    transform: translateY(100px) rotateX(89.9deg);
 }
 .animC:nth-child(5) {
-    transform: translateX(-100px) rotateY(-90deg);
+    transform: translateX(-100px) rotateY(-89.9deg);
 }
 .animC:nth-child(6) {
-    transform: translateX(100px) rotateY(90deg);
+    transform: translateX(100px) rotateY(89.9deg);
 }
 @media only screen and (max-width: 768px) {
     .topSec>h1 {

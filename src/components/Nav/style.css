@@ -46,7 +46,7 @@ i.fa-times {
     border-radius: 50%;
     color: white;
     padding: 15px;
-    font-size: 10vmin;
+    font-size: 6vmin;
     text-decoration: none;
 }
 i.fa-times {
@@ -85,11 +85,11 @@ i.fa-times:visited {
     i.fa-bars,
     i.fa-times {
         display: block;
-        color: white;
+        color: rgb(53, 233, 104);
         z-index: 20000;
     }
     .nav-scrolled>div>a>.fa-bars {
-        color: darkgreen;
+        color: rgb(53, 233, 104);
     }
     .smNavLogo {
         transform: scale(0.3);
