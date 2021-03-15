@@ -122,6 +122,9 @@ form>textarea {
     transform-style: preserve-3d;
     pointer-events: none;
     z-index: 1;
+    -webkit-animation: cubis 20s linear infinite;
+    -moz-animation: cubis 20s linear infinite;
+    -o-animation: cubis 20s linear infinite;
     animation: cubis 20s linear infinite;
 }
 .hideform {
