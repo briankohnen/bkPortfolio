@@ -1,4 +1,5 @@
 .contact {
+    position: relative;
     margin: 0 auto;
     max-width: 90vw;
     grid-row: 3/4;
@@ -26,7 +27,7 @@ h1>span {
 }
 .contactButtons {
     position: absolute;
-    bottom: 0;
+    bottom: 5vh;
     right: 0;
     left: 5vw;
     font-size: 36px;
@@ -97,13 +98,14 @@ form>textarea {
 .resumeButton {
     position: absolute;
     font-size: 3vmin;
-    bottom: 0;
+    bottom: 5vh;
     left: 40vw;
     right: 0;
     background: rgb(30, 36, 13);
     color: white;
     padding: 2vmin;
     width: fit-content;
+    height: fit-content;
     text-align: center;
     border-radius: 5px;
     transition: all 150ms;
@@ -356,7 +358,7 @@ input {
         position: absolute;
         left: 10vw;
         font-size: 36px;
-        bottom: 5%;
+        top: 30vh;
     }
     .contactButtons>a {
         margin-right: 12.5vw;
@@ -364,6 +366,7 @@ input {
     .resumeButton {
         width: 50vw;
         left: 10vw;
+        top: 85vh;
     }
     .cubeC {
         display: none;
@@ -379,6 +382,9 @@ input {
     }
     .faObs {
         font-size: 10vmin;
+    }
+    .contactButtons {
+        top: 60vh;
     }
     .resumeButton {
         font-size: 4vmin;
@@ -422,8 +428,12 @@ input {
     .contact {
         position: relative;
     }
+    .cubeC {
+        display: none;
+    }
     .contactButtons {
         position: relative;
+        top: 5vh;
         left: 0;
     }
     .resumeButton {
@@ -436,14 +446,17 @@ input {
     .contact {
         position: relative;
     }
+    .cubeC {
+        display: none;
+    }
     .contactButtons {
         position: relative;
         left: 0;
-        bottom: 0;
+        bottom: 0vh;
     }
     .resumeButton {
         position: relative;
-        bottom: 0;
+        bottom: 12vh;
         left: 35vw;
     }
 
