@@ -345,6 +345,14 @@ input {
     -webkit-transform: translateX(100px) rotateY(89.9deg);
     transform: translateX(100px) rotateY(89.9deg);
 }
+@media screen and (max-device-width: 850px) and (orientation: landscape) {
+    .contactButtons {
+        top: 30vh;
+    }
+    .resumeButton {
+        top: 85vh;
+    }
+}
 @media only screen and (max-width: 768px) {
     .topSec>h1 {
         margin-top: 4vh;
@@ -358,7 +366,7 @@ input {
         position: absolute;
         left: 10vw;
         font-size: 36px;
-        top: 30vh;
+        top: 60vh;
     }
     .contactButtons>a {
         margin-right: 12.5vw;
