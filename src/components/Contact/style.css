@@ -149,6 +149,8 @@ form>textarea {
     box-shadow: inset 0 0 0 0.5em;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
     transform: translateZ(0);
   }
 .loading:after,
@@ -165,8 +167,13 @@ form>textarea {
     top: -0.1em;
     left: -0.1em;
     -webkit-transform-origin: 5.1em 5.1em;
+    -moz-transform-origin: 5.1em 5.1em;
+    -ms-transform-origin: 5.1em 5.1em;
+    -o-transform-origin: 5.1em 5.1em;
     transform-origin: 5.1em 5.1em;
     -webkit-animation: load2 2s infinite ease 1.5s;
+    -moz-animation: load2 2s infinite ease 1.5s;
+    -o-animation: load2 2s infinite ease 1.5s;
     animation: load2 2s infinite ease 1.5s;
 }
 .loading:after {
@@ -177,11 +184,19 @@ form>textarea {
     top: -0.1em;
     left: 4.9em;
     -webkit-transform-origin: 0.1em 5.1em;
+    -moz-transform-origin: 0.1em 5.1em;
+    -ms-transform-origin: 0.1em 5.1em;
+    -o-transform-origin: 0.1em 5.1em;
     transform-origin: 0.1em 5.1em;
     -webkit-animation: load2 2s infinite ease;
+    -moz-animation: load2 2s infinite ease;
+    -o-animation: load2 2s infinite ease;
     animation: load2 2s infinite ease;
 }
 .done {
+    -webkit-animation: growin 5s forwards;
+    -moz-animation: growin 5s forwards;
+    -o-animation: growin 5s forwards;
     animation: growin 5s forwards;
 }
 .done:after {
@@ -189,6 +204,10 @@ form>textarea {
     height: 4em;
     top: 2em;
     left: 3.5em;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
     border-bottom: 1em solid #57d68c;
     border-right: 1em solid #57d68c;
@@ -231,6 +250,46 @@ input {
     }
     100% {
         opacity: 0;
+    }
+}
+@-webkit-keyframes cubis {
+    0%
+    {
+        -webkit-transform: perspective(600px) rotateY(0deg);
+    }
+    100%
+    {
+        -webkit-transform: perspective(600px) rotateX(360deg) rotateY(360deg);
+    }
+}
+@-moz-keyframes cubis {
+    0%
+    {
+        transform: perspective(600px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(600px) rotateX(360deg) rotateY(360deg);
+    }
+}
+@-ms-keyframes cubis {
+    0%
+    {
+        -ms-transform: perspective(600px) rotateY(0deg);
+    }
+    100%
+    {
+        -ms-transform: perspective(600px) rotateX(360deg) rotateY(360deg);
+    }
+}
+@-o-keyframes cubis {
+    0%
+    {
+        transform: perspective(600px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(600px) rotateX(360deg) rotateY(360deg);
     }
 }
 @keyframes cubis {
