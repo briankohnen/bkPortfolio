@@ -10,6 +10,55 @@ class Portfolio extends Component {
 
     projects = [
         {
+            content:
+            <div className='projSpotlite' id='PortfolioG'>
+                <div className='projHeader'>
+                <img title='Template' className='image' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
+                    <p>Portfolio<br></br>Template</p>
+                </div>
+
+                <div className='projLower'>
+
+                <ul className='projDesc'>
+                    <li>A template for a photo/writing portfolio</li>
+                    <li>Practice with creative layouts and react-transition-groups</li>
+                    <li>Emphasized responsive design</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
+                </div>
+
+                </div>
+
+            </div>
+        },
+        {
+            content: 
+            <div className='projSpotlite' id='funHouse'>
+                <div className='projHeader'>
+                <img title='myRoom' className='image' src='https://i.giphy.com/media/OsECHdARJQ81PB1Mxf/source.gif' alt='myRoom'></img>
+                    <p>my<br></br>room</p>
+                </div>
+
+                <div className='projLower'>
+
+                <ul className='projDesc'>
+                    <li>A personal project working with 3d in .js and .css</li>
+                    <li>Only for use on desktop at the moment</li>
+                    <li>Try it out! Use the sliders to rotate the scene</li>
+                </ul>
+
+                <div className='hoverlinks'>
+                    <a href='https://funhouse2021.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
+                    <a href='https://github.com/briankohnen/2021FunHouse' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-github-alt'></a>
+                </div>
+
+                </div>
+
+            </div>
+        },
+        {
             content: 
             <div className={`projSpotlite`} id='bdn'>
                 <div className='projHeader'>
@@ -28,30 +77,6 @@ class Portfolio extends Component {
                 <div className='hoverlinks'>
                     <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer' title='deployed link' className='hoverLink fa fa-link'></a>
                     <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer' title='github link' className='hoverLink fa fa-github-alt'></a>
-                </div>
-
-                </div>
-
-            </div>
-        },
-        {
-            content:
-            <div className='projSpotlite' id='PortfolioG'>
-                <div className='projHeader'>
-                <img title='Template' className='image' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
-                    <p>Portfolio<br></br>Template</p>
-                </div>
-
-                <div className='projLower'>
-
-                <ul className='projDesc'>
-                    <li>A template for a photo/writing portfolio</li>
-                    <li>Practice with creative layouts and react-transition-groups</li>
-                    <li>Emphasized responsive design</li>
-                </ul>
-
-                <div className='hoverlinks'>
-                    <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer' className='hoverLink fa fa-link'></a>
                 </div>
 
                 </div>
@@ -115,8 +140,8 @@ class Portfolio extends Component {
 
             const timer = setTimeout(() => {
                 if (this.state.activeView <= 0 && oper === -1) {
-                    this.setState({activeView: 3});
-                } else if (this.state.activeView >= 3 && oper === 1) {
+                    this.setState({activeView: 4});
+                } else if (this.state.activeView >= 4 && oper === 1) {
                     this.setState({activeView: 0});
                 } else {
                     this.setState({activeView: this.state.activeView+=oper});
