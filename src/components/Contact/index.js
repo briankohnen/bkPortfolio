@@ -73,7 +73,7 @@ class Contact extends Component {
                         </div>
                     </div>
                     <div>
-                        <p>Right now I'm working on a few projects for a small number of clients, but I'm always available to talk.
+                        <p>Right now I'm working on a few projects for a number of clients, but I'm always available to talk.
                             <br></br>
                             Looking for someone to take care of your small business website? Need a developer for a scalable app?
                             <br></br> 
