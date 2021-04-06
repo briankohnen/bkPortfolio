@@ -1,0 +1,86 @@
+.about {
+    position: absolute;
+    top: 15vh;
+    color: white;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about>h1 {
+    font-size: 10vmin;
+    animation: fadedown 1500ms;
+}
+.about>section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about>section>div {
+    flex-basis: 95%;
+    margin-top: 5vh;
+}
+.about>section>div>p {
+    font-size: 4vmin;
+    animation: fadedown 1200ms;
+}
+.about>section>div:nth-of-type(2)>p {
+    font-size: 3.5vmin;
+    animation: fadedown 1300ms;
+}
+.about>section>div>ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    opacity: 0;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: fadedown 1200ms forwards;
+}
+.about>section>div>ul>li {
+    font-size: 4vmin;
+}
+.about>section>div>ul>li:nth-child(1) {
+    color: rgb(137, 210, 255);
+}
+.about>section>div>ul>li:nth-child(2) {
+    color: rgb(116, 255, 218);
+}
+.about>section>div>ul>li:nth-child(3) {
+    color: rgb(255, 144, 124);
+}
+.about>section>div>ul>li:nth-child(4) {
+    color: rgb(255, 172, 255);
+}
+.about>section:nth-of-type(2) {
+    width: 100%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+.resumeButton {
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 4vmin;
+    transition: all 200ms;
+    animation: fadedown 1000ms;
+}
+@media screen and (min-width: 1025px) {
+    .about>section>div {
+        flex-basis: 45%;
+    }
+    .about>section>div>p {
+        font-size: 3vmin;
+    }
+    .about>section>div:nth-of-type(2)>p {
+        font-size: 3vmin;
+    }
+    .about>section>div>ul>li {
+        font-size: 3vmin;
+    }
+    .resumeButton {
+        font-size: 3vmin;
+    }
+}

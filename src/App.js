@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import NavOverlay from './components/NavOverlay';
+import Transitioner from './components/Transitioner';
+import Home from './pages/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    width: '',
+    height: '',
+    activePage: 'home'
+  };
+
+  handleGlobalState = (state, value) => {
+    this.setState({ [state]: value });
+  };
+
+  updateWindowSize = () => {
+    this.setState({width: window.innerWidth, height: window.innerHeight});
+  };
+
+  componentDidMount = () => {
+    this.setState({width: window.innerWidth, height: window.innerHeight});
+    window.addEventListener('resize', this.updateWindowSize);
+  };
+
+  render() {
+    return (
+        <div className='App'>
+          <NavOverlay handleGlobalState={this.handleGlobalState} activePage={this.state.activePage} />
+          <Transitioner animation={this.state.activePage} />
+          <Home animation={this.state.activePage}  width={this.state.width} height={this.state.height}  />
+        </div>
+    );
+  };
 }
 
 export default App;

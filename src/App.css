@@ -1,38 +1,121 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.home {
+  height: 100vh;
+  width: 100vw;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: difference;
+  font-family: 'Kanit', sans-serif;
 }
-
-.App-link {
-  color: #61dafb;
+.home>article>h1 {
+  font-size: 14vmin;
+  animation: faderight 1000ms;
+  -webkit-text-fill-color: white;
+  /* -webkit-text-stroke: 2px white; */
+  letter-spacing: 0.5vw;
+  font-weight: 500;
+  opacity: inherit;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home>article>h3 {
+  opacity: inherit;
+  font-size: 6vmin;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  animation: faderight 1500ms;
+  font-weight: 100;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeup {
+  0% {
+      opacity: 0;
+      transform: translateY(5vh);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadedown {
+  0% {
+      opacity: 0;
+      transform: translateY(-5vh);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes faderight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5vw);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes fadeleft {
+  0% {
+    opacity: 0;
+    transform: translateX(5vw);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes home {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+@keyframes about {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
+@keyframes portfolio {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+}
+@keyframes contact {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
   }
 }

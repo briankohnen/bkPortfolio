@@ -1,0 +1,66 @@
+.transitionWrap {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+}
+@keyframes homet {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    65% {
+        left: 0;
+        width: 150vw;
+    }
+    100% {
+        left: 0;
+        width: 0;
+        transform: translateX(100vw);
+    }  
+}
+@keyframes aboutt {
+    0% {
+        top: 0;
+        height: 0;
+    }
+    65% {
+        top: 0;
+        height: 150vh;
+    }
+    100% {
+        top: 0;
+        height: 0;
+        transform: translateY(100vh);
+    }
+}
+@keyframes portfoliot {
+    0% {
+        right: 0;
+        width: 0;
+    }
+    65% {
+        right: 0;
+        width: 150vw;
+    }
+    100% {
+        right: 0;
+        width: 0;
+        transform: translateX(-100vw);
+    }
+}
+@keyframes contactt {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+    65% {
+        bottom: 0;
+        height: 150vh;
+    }
+    100% {
+        bottom: 0;
+        height: 0;
+        transform: translateY(-100vh);
+    }
+}
