@@ -48,6 +48,7 @@
 .spotlite>div>p {
     text-align: right;
     flex-basis: 100%;
+    animation: fadeleft 1950ms;
 }
 .spotlite>div>p>a {
     margin-right: 2vw;
