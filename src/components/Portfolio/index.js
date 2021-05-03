@@ -8,12 +8,35 @@ const Portfolio = () => {
             <div className='spotlite'>
 
             <div>
+                <a href='https://tadicfilip.com/' target='_blank' rel='noopener noreferrer'>
+                    <img title='tadic filip' src='https://media0.giphy.com/media/rR1nYQ0Z36v7anWE0k/giphy.gif' alt='Tadic Filip'></img>
+                </a>
+
+                <ul>
+                    <li>A portfolio for a fashion designer</li>
+                    <li>Minimal design with unique page transitions</li>
+                    <li>Challenge: optimizing large image loadtimes</li>
+                </ul>
+
+                <p>
+                    <a href='https://tadicfilip.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                </p>
+
+            </div>
+
+            <h1>tadic filip</h1>
+
+            </div>
+
+            <div className='spotlite'>
+
+            <div>
                 <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
                     <img title='template' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
                 </a>
 
                 <ul>
-                    <li>React template for a photo/writing portfolio</li>
+                    <li>A template for a photo/writing portfolio</li>
                     <li>Practice with creative layouts and react-transition-groups</li>
                     <li>Emphasized responsive design</li>
                 </ul>
@@ -26,31 +49,6 @@ const Portfolio = () => {
 
             <h1>portfolio template</h1>
 
-            </div>
-
-            
-            <div className='spotlite'>
-
-            <div>
-                <a href='https://funhouse2021.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <img title='myRoom.3d' src='https://i.giphy.com/media/OsECHdARJQ81PB1Mxf/source.gif' alt='3d in html and css'></img>
-                </a>
-
-                <ul>
-                    <li>A personal project working with 3d in html and css</li>
-                    <li>Only for use on desktop at the moment</li>
-                    <li>Try it out! Use the sliders to rotate the scene</li>
-                </ul>
-
-                <p>
-                    <a href='https://funhouse2021.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
-                    <a href='https://github.com/briankohnen/2021FunHouse' target='_blank' rel='noopener noreferrer'>github link ↗</a>
-                </p>
-
-            </div>
-
-            <h1>myroom.3d</h1>
-            
             </div>
 
             <div className='spotlite'>
@@ -74,6 +72,30 @@ const Portfolio = () => {
             </div>
 
             <h1>breakdown</h1>
+
+            </div>
+
+            <div className='spotlite'>
+
+                <div>
+                    <a href='https://funhouse2021.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='myRoom.3d' src='https://i.giphy.com/media/OsECHdARJQ81PB1Mxf/source.gif' alt='3d in html and css'></img>
+                    </a>
+
+                    <ul>
+                        <li>A personal project working with 3d in html and css</li>
+                        <li>Only for use on desktop at the moment</li>
+                        <li>Try it out! Use the sliders to rotate the scene</li>
+                    </ul>
+
+                    <p>
+                        <a href='https://funhouse2021.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                        <a href='https://github.com/briankohnen/2021FunHouse' target='_blank' rel='noopener noreferrer'>github link ↗</a>
+                    </p>
+
+                </div>
+
+                <h1>myroom.3d</h1>
 
             </div>
 
