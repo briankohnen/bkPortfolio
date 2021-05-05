@@ -7,71 +7,94 @@ const Portfolio = () => {
 
             <div className='spotlite'>
 
-            <div>
-                <a href='https://tadicfilip.com/' target='_blank' rel='noopener noreferrer'>
-                    <img title='tadic filip' src='https://media0.giphy.com/media/rR1nYQ0Z36v7anWE0k/giphy.gif' alt='Tadic Filip'></img>
-                </a>
+                <div>
+                    <a href='https://tadicfilip.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='tadic filip' src='https://media0.giphy.com/media/rR1nYQ0Z36v7anWE0k/giphy.gif' alt='Tadic Filip'></img>
+                    </a>
 
-                <ul>
-                    <li>A portfolio for a fashion designer</li>
-                    <li>Minimal design with unique page transitions</li>
-                    <li>Challenge: optimizing large image loadtimes</li>
-                </ul>
+                    <ul>
+                        <li>A portfolio for a fashion designer</li>
+                        <li>Minimal design with unique page transitions</li>
+                        <li>Challenge: optimizing large image loadtimes</li>
+                    </ul>
 
-                <p>
-                    <a href='https://tadicfilip.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
-                </p>
+                    <p>
+                        <a href='https://tadicfilip.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                    </p>
 
-            </div>
+                </div>
 
-            <h1>tadic filip</h1>
-
-            </div>
-
-            <div className='spotlite'>
-
-            <div>
-                <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <img title='template' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
-                </a>
-
-                <ul>
-                    <li>A template for a photo/writing portfolio</li>
-                    <li>Practice with creative layouts and react-transition-groups</li>
-                    <li>Emphasized responsive design</li>
-                </ul>
-
-                <p>
-                    <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
-                </p>
-
-            </div>
-
-            <h1>portfolio template</h1>
+                <h1>tadicfilip.com</h1>
 
             </div>
 
             <div className='spotlite'>
 
-            <div>
-                <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <img title='breakdown' src='https://media1.giphy.com/media/RLG1P1nJGvSpK6MiWx/giphy.gif' alt='breakdown'></img>
-                </a>
+                <div>
+                    <a href='https://casscellina.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='casscellina' src='https://media0.giphy.com/media/pp1Y4UN0jf82GgPeby/giphy.gif' alt='Casscellina'></img>
+                    </a>
 
-                <ul>
-                    <li>A quick breakdown of your favorite musicians' top songs/genres</li>
-                    <li>Reformats data from Spotify and LastFM APIs</li>
-                    <li>Leverages Chart.js package for simple graphing</li>
-                </ul>
+                    <ul>
+                        <li>A fun business website for a writer/stylist</li>
+                        <li>Integrated Calendly.com widget for booking feature</li>
+                        <li>Three.js for 3d elements throughout</li>
+                    </ul>
 
-                <p>
-                    <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
-                    <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer'>github link ↗</a>
-                </p>
+                    <p>
+                        <a href='https://casscellina.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                    </p>
+
+                </div>
+
+                <h1>casscellina.com</h1>
 
             </div>
 
-            <h1>breakdown</h1>
+            <div className='spotlite'>
+
+                <div>
+                    <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='breakdown' src='https://media1.giphy.com/media/RLG1P1nJGvSpK6MiWx/giphy.gif' alt='breakdown'></img>
+                    </a>
+
+                    <ul>
+                        <li>A quick breakdown of your favorite musicians' top songs/genres</li>
+                        <li>Reformats data from Spotify and LastFM APIs</li>
+                        <li>Leverages Chart.js package for simple graphing</li>
+                    </ul>
+
+                    <p>
+                        <a href='https://breakdown-app.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                        <a href='https://github.com/briankohnen/breakdown' target='_blank' rel='noopener noreferrer'>github link ↗</a>
+                    </p>
+
+                </div>
+
+                <h1>breakdown</h1>
+
+            </div>
+
+            <div className='spotlite'>
+
+                <div>
+                    <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='template' src='https://media0.giphy.com/media/qQcYHo6I14zB6N3O7H/giphy.gif' alt='Portfolio Template'></img>
+                    </a>
+
+                    <ul>
+                        <li>A template for a photo/writing portfolio</li>
+                        <li>Practice with creative layouts and react-transition-groups</li>
+                        <li>Emphasized responsive design</li>
+                    </ul>
+
+                    <p>
+                        <a href='https://test-galler.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                    </p>
+
+                </div>
+
+                <h1>portfolio template</h1>
 
             </div>
 
@@ -101,25 +124,25 @@ const Portfolio = () => {
 
             <div className='spotlite'>
 
-            <div>
-                <a href='https://dreamlifer.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-                    <img title='dreamlifer' src='https://media2.giphy.com/media/IlgHjVWxQMtdU53Veu/giphy.gif' alt='Dream Lifer'></img>
-                </a>
+                <div>
+                    <a href='https://dreamlifer.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
+                        <img title='dreamlifer' src='https://media2.giphy.com/media/IlgHjVWxQMtdU53Veu/giphy.gif' alt='Dream Lifer'></img>
+                    </a>
 
-                <ul>
-                    <li>A personalized scheduling app to keep track of ones' goals</li>
-                    <li>Basic user authentication with cookies/express</li>
-                    <li>Developed with MongoDB, Express, React, and Node</li>
-                </ul>
+                    <ul>
+                        <li>A personalized scheduling app to keep track of ones' goals</li>
+                        <li>Basic user authentication with cookies/express</li>
+                        <li>Developed with MongoDB, Express, React, and Node</li>
+                    </ul>
 
-                <p>
-                    <a href='https://dreamlifer.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
-                    <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer'>github link ↗</a>
-                </p>
+                    <p>
+                        <a href='https://dreamlifer.herokuapp.com/' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                        <a href='https://github.com/SachaSkinner/DreamLifer' target='_blank' rel='noopener noreferrer'>github link ↗</a>
+                    </p>
 
-            </div>
+                </div>
 
-            <h1>dreamlifer</h1>
+                <h1>dreamlifer</h1>
 
             </div>
 
