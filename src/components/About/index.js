@@ -11,7 +11,7 @@ const About = () => {
                         I'm a freelance developer / designer.
                     </p>
                     <p>
-                        I have skills in full-stack development but currently am focused more on building creative and unique front-end projects.
+                        I'm skilled in full-stack development but currently focused more on building creative and unique front-end projects.
                     </p>
                 </div>
 

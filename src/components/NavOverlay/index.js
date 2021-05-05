@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './navoverlay.css';
 
 const NavOverlay = (props) => {
@@ -21,6 +21,14 @@ const NavOverlay = (props) => {
         setNavState({tinyOpen: !navState.tinyOpen});
         props.handleGlobalState('activePage', globalToSet);
     };
+
+    useEffect(() => {
+        window.onmousemove = e => {
+            let x = e.clientX - 75;
+            let y = e.clientY - 50;
+            setNavState({spawn: navState.spawn, x: x, y: y, title: navState.title, tinyOpen: navState.tinyOpen});
+        };
+    });
 
     return (
         <div className='mainOverlay'>

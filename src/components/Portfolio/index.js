@@ -8,7 +8,7 @@ const Portfolio = () => {
             <div className='spotlite'>
 
                 <div>
-                    <a href='https://tadicfilip.com/' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://tadicfilip.com' target='_blank' rel='noopener noreferrer'>
                         <img title='tadic filip' src='https://media0.giphy.com/media/rR1nYQ0Z36v7anWE0k/giphy.gif' alt='Tadic Filip'></img>
                     </a>
 
@@ -24,14 +24,14 @@ const Portfolio = () => {
 
                 </div>
 
-                <h1>tadicfilip.com</h1>
+                <h1>tadic filip</h1>
 
             </div>
 
             <div className='spotlite'>
 
                 <div>
-                    <a href='https://casscellina.com/' target='_blank' rel='noopener noreferrer'>
+                    <a href='http://casscellina.com/' target='_blank' rel='noopener noreferrer'>
                         <img title='casscellina' src='https://media0.giphy.com/media/pp1Y4UN0jf82GgPeby/giphy.gif' alt='Casscellina'></img>
                     </a>
 
@@ -42,12 +42,12 @@ const Portfolio = () => {
                     </ul>
 
                     <p>
-                        <a href='https://casscellina.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
+                        <a href='http://casscellina.com' target='_blank' rel='noopener noreferrer'>live link ↗</a>
                     </p>
 
                 </div>
 
-                <h1>casscellina.com</h1>
+                <h1>casscellina</h1>
 
             </div>
 

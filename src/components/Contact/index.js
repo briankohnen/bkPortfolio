@@ -73,7 +73,7 @@ class Contact extends Component {
                         </div>
                     </div>
                     <div>
-                        <p>Right now I'm working on a few projects for a number of clients, but I'm always available to talk.
+                        <p>I'm probably working on a few projects for a number of clients, but I'm always available to talk.
                             <br></br>
                             Looking for someone to take care of your small business website? Need a developer for a scalable app?
                             <br></br> 
@@ -84,9 +84,9 @@ class Contact extends Component {
                 </div>
 
                 <div className='contactButtons'>
-                        <a href="mailto:kohnenbrian@gmail.com" rel='noopener noreferrer' className="fa fa-envelope faObs" title="e-mail" alt='email'></a>
-                        <a href="https://github.com/briankohnen" target="_blank" rel='noopener noreferrer' className="fa fa-github faObs" title="github" alt='github'></a>
-                        <a href="https://www.linkedin.com/in/brian-kohnen-b05025187/" target="_blank" rel='noopener noreferrer' className="fa fa-linkedin faObs" title="linkedIn" alt='linkedin'></a>
+                        <a href="mailto:kohnenbrian@gmail.com" rel='noopener noreferrer' className="fa fa-envelope faObs" title="e-mail" alt='email'> </a>
+                        <a href="https://github.com/briankohnen" target="_blank" rel='noopener noreferrer' className="fa fa-github faObs" title="github" alt='github'> </a>
+                        <a href="https://www.linkedin.com/in/brian-kohnen-b05025187/" target="_blank" rel='noopener noreferrer' className="fa fa-linkedin faObs" title="linkedIn" alt='linkedin'> </a>
                 </div>
 
             </section>

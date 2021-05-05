@@ -60,11 +60,11 @@
     align-items: center;
     pointer-events: none;
     opacity: 0;
-    transition: left 100ms linear, top 100ms linear;
+    transition: left 100ms linear, top 100ms linear, opacity 100ms linear;
     mix-blend-mode: difference;
 }
 .showSpawn {
-    opacity: 0;
+    opacity: 1;
 }
 .tinyMenu {
     position: absolute;

@@ -1,5 +1,5 @@
 .portfolio {
-    width: 65vw;
+    width: 75vw;
     height: 75vh;
     display: flex;
     overflow-y: auto;
@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     min-height: 0px;
     margin-bottom: 20vh;
+    word-break: break-word;
 }
 .spotlite>div {
     display: flex;
@@ -59,6 +60,7 @@
 }
 @media screen and (min-width: 1025px) {
     .portfolio {
+        width: 65vw;
         height: 65vh;
         padding-top: 10vh;
     }
